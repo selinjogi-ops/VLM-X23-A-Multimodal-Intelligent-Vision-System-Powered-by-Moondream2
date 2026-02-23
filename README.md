@@ -6,21 +6,38 @@ A real-time AI surveillance and scene-understanding system powered by Moondream2
 
 VLM-X23 is a real-time multimodal intelligent monitoring system that combines:
 
-*Vision-Language reasoning
-*Crowd detection
+1.Vision-Language reasoning
 
-Theft probability scoring
+2.Crowd detection
 
-Loitering detection
+3.Theft probability scoring
 
-Hazard analysis
+4.Loitering detection
 
-OCR
+5.Hazard analysis
 
-Behavior analysis
+6.OCR
 
-Voice narration
+7.Behavior analysis
 
-Alert system with sound feedback
+8.Voice narration
+
+9.Alert system with sound feedback
 
 It uses the lightweight Moondream2 VLM for semantic understanding and integrates classical computer vision techniques for efficient real-time performance.
+
+# Architecture
+
+Webcam Input
+      ↓
+Frame Preprocessing
+      ↓
+Moondream2 Vision Encoder
+      ↓
+Multimodal Reasoning Engine
+      ↓
+Event Logic & Risk Scoring
+      ↓
+Alert System (Sound + HUD + Voice)
+      ↓
+Session Logging + Evidence Capture
