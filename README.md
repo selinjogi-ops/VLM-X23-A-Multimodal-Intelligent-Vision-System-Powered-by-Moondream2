@@ -29,23 +29,23 @@ It uses the lightweight Moondream2 VLM for semantic understanding and integrates
 # Architecture
 
 Webcam Input
+
       ↓
-      
 Frame Preprocessing
+
       ↓
-      
 Moondream2 Vision Encoder
+
       ↓
-      
 Multimodal Reasoning Engine
+
       ↓
-      
 Event Logic & Risk Scoring
+
       ↓
-      
 Alert System (Sound + HUD + Voice)
-      ↓
-      
+
+      ↓ 
 Session Logging + Evidence Capture
 
 # Core Features
