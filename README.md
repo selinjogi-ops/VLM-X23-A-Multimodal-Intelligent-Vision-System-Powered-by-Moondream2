@@ -6,23 +6,23 @@ A real-time AI surveillance and scene-understanding system powered by Moondream2
 
 VLM-X23 is a real-time multimodal intelligent monitoring system that combines:
 
-1.Vision-Language reasoning
+1. Vision-Language reasoning
 
-2.Crowd detection
+2. Crowd detection
 
-3.Theft probability scoring
+3. Theft probability scoring
 
-4.Loitering detection
+4. Loitering detection
 
-5.Hazard analysis
+5. Hazard analysis
 
-6.OCR
+6. OCR
 
-7.Behavior analysis
+7. Behavior analysis
 
-8.Voice narration
+8. Voice narration
 
-9.Alert system with sound feedback
+9. Alert system with sound feedback
 
 It uses the lightweight Moondream2 VLM for semantic understanding and integrates classical computer vision techniques for efficient real-time performance.
 
@@ -34,91 +34,91 @@ It uses the lightweight Moondream2 VLM for semantic understanding and integrates
 
 # 1.Scene Intelligence
 
-*Scene description
+* Scene description
 
-*Emotion analysis
+* Emotion analysis
 
-*Behavior understanding
+* Behavior understanding
 
-*Interaction analysis
+* Interaction analysis
 
-*Posture detection
+* Posture detection
 
-*Cleanliness assessment
+* Cleanliness assessment
 
-*Surface hazard detection
+* Surface hazard detection
 
-*PPE / safety monitoring
+* PPE / safety monitoring
 
-*OCR text reading
+* OCR text reading
 
 # 2.Security Monitoring
 
-*Theft detection (multi-frame scoring system)
+* Theft detection (multi-frame scoring system)
 
-*Crowd detection
+* Crowd detection
 
-*Loitering detection
+* Loitering detection
 
-*Smart object disappearance logic
+* Smart object disappearance logic
 
-*Motion-triggered AI inference
+* Motion-triggered AI inference
 
-*Evidence image capture
+* Evidence image capture
 
 # 3.Smart Alert System
 
-*3-beep alarm system
+* 3-beep alarm system
 
-*Cooldown logic to prevent alert spamming
+* Cooldown logic to prevent alert spamming
 
-*Voice narration (pyttsx3)
+* Voice narration (pyttsx3)
 
-*HUD alert overlay
+* HUD alert overlay
 
 # Model Details
 
 # 1)Vision-Language Model
 
-*Model: Moondream2
+**Model**: Moondream2
 
-*Model ID: vikhyatk/moondream2
+**Model ID**: vikhyatk/moondream2
 
-*Revision: 2024-08-26
+**Revision**: 2024-08-26
 
-*Framework:Transformers
+**Framework**:Transformers
 
-*Device: CUDA (if available) / CPU fallback
+**Device**: CUDA (if available) / CPU fallback
 
-*Image resize optimization: 378 × 378 for faster inference
+**Image resize optimization**: 378 × 378 for faster inference
 
 # 2)Detection Methods
 
-*HOG Person Detector (OpenCV)
+* HOG Person Detector (OpenCV)
 
-*Haar Cascade Face Detector
+* Haar Cascade Face Detector
 
-*VLM-based object detection fallback
+* VLM-based object detection fallback
 
-*Custom tracker for ID-based movement tracking
+* Custom tracker for ID-based movement tracking
 
 # System Design
 
 The system follows a modular, multi-threaded architecture:
 
-*Main Webcam Loop
+* Main Webcam Loop
 
-*VLM Worker Thread
+* VLM Worker Thread
 
-*AI Auto-Monitor Thread
+* AI Auto-Monitor Thread
 
-*Sound Alert Thread
+* Sound Alert Thread
 
-*Voice Narration Thread
+* Voice Narration Thread
 
-*Task Queue + Result Queue
+* Task Queue + Result Queue
 
-*Session-based task isolation
+* Session-based task isolation
 
 This prevents UI freezing and enables asynchronous AI reasoning.
 
@@ -128,17 +128,17 @@ Theft detection is not based on a single frame.
 
 It calculates a dynamic score based on:
 
-*Repeated suspicious actions
+* Repeated suspicious actions
 
-*Object disappearance (e.g., phone missing)
+* Object disappearance (e.g., phone missing)
 
-*Aggressive interaction keywords
+* Aggressive interaction keywords
 
-*Exit count > Entry count
+* Exit count > Entry count
 
-*Crowd presence
+* Crowd presence
 
-*Multi-frame voting mechanism
+* Multi-frame voting mechanism
 
 If score ≥ 0.30 → Theft Alert Triggered.
 
@@ -188,13 +188,13 @@ If score ≥ 0.30 → Theft Alert Triggered.
 
 # Hardware & Resource Usage
 
-*RAM Usage: 8–12 GB recommended
+* RAM Usage: 8–12 GB recommended
 
-*Processing Speed: ~1.5–3 sec per AI inference (CPU), faster with CUDA
+* Processing Speed: ~1.5–3 sec per AI inference (CPU), faster with CUDA
 
-*Storage Required: ~3–5 GB (model + dependencies)
+* Storage Required: ~3–5 GB (model + dependencies)
 
-*Camera: 720p / 1080p webcam
+* Camera: 720p / 1080p webcam
 
 # Required Packages
 
@@ -206,27 +206,27 @@ winsound (built-in)
 
 # Multi-Threading Strategy
 
-*Dedicated AI processing thread
+* Dedicated AI processing thread
 
-*Separate sound loop
+* Separate sound loop
 
-*Dedicated voice engine thread
+* Dedicated voice engine thread
 
-*Task queue to prevent overlapping VLM calls
+* Task queue to prevent overlapping VLM calls
 
-*Session ID system to discard outdated tasks
+* Session ID system to discard outdated tasks
 
 # Safety Mechanisms
 
-*Alert cooldown timers
+* Alert cooldown timers
 
-*Session-based result filtering
+* Session-based result filtering
 
-*Multi-vote confirmation for theft
+* Multi-vote confirmation for theft
 
-*Motion-based AI throttling
+* Motion-based AI throttling
 
-*Auto reset after alert duration
+* Auto reset after alert duration
 
 # How to Run
 
@@ -238,38 +238,38 @@ Press keys to trigger intelligent monitoring modes.
 
 VLM-X23 demonstrates:
 
-*Lightweight Vision-Language deployment
+* Lightweight Vision-Language deployment
 
-*Hybrid AI + classical CV architecture
+* Hybrid AI + classical CV architecture
 
-*Real-time multimodal reasoning
+* Real-time multimodal reasoning
 
-*Practical security AI prototype
+* Practical security AI prototype
 
-*Edge-device capable AI surveillance
+* Edge-device capable AI surveillance
 
 # Example Outputs
 
-*THEFT DETECTED (score=0.45)
+* THEFT DETECTED (score=0.45)
 
-*Crowd Detected
+* Crowd Detected
 
-*LOITERING DETECTED
+* LOITERING DETECTED
 
-*Status: Hazard - Knife
+* Status: Hazard - Knife
 
-*No visible text
+* No visible text
 
-*Clean and organized environment
+* Clean and organized environment
 
 # Future Improvements
 
-*Replace HOG with YOLOv8 for better detection
+* Replace HOG with YOLOv8 for better detection
 
-*Integrate face recognition module
+* Integrate face recognition module
 
-*Deploy as Flask / FastAPI web system
+* Deploy as Flask / FastAPI web system
 
-*Add database logging instead of text file
+* Add database logging instead of text file
 
-*Edge device optimization (Jetson Nano)
+* Edge device optimization (Jetson Nano)
