@@ -1,0 +1,68 @@
+# --------------------
+# Python
+# --------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+env/
+.venv/
+ENV/
+
+# --------------------
+# Model & Weights
+# --------------------
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# HuggingFace Cache
+.cache/
+huggingface/
+hf_cache/
+
+# --------------------
+# Logs & Runtime Files
+# --------------------
+*.log
+session_log.txt
+
+# --------------------
+# Captured Evidence
+# --------------------
+captured_evidence/
+*.jpg
+*.png
+
+# --------------------
+# Temporary Files
+# --------------------
+*.tmp
+*.bak
+
+# --------------------
+# OS Files
+# --------------------
+.DS_Store
+Thumbs.db
+
+# --------------------
+# IDE / Editor
+# --------------------
+.vscode/
+.idea/
+
+# --------------------
+# Jupyter
+# --------------------
+.ipynb_checkpoints/
+
+# --------------------
+# Video Files
+# --------------------
+*.mp4
+*.avi
+*.mov
